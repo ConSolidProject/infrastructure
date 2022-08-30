@@ -1,0 +1,8 @@
+[submodule "api/raapi"]
+	path = api/raapi
+	url = https://github.com/LBD-Hackers/raapi.git
+	branch = paper
+[submodule "api/daapi"]
+	path = api/daapi
+	url = https://github.com/LBD-Hackers/daapi.git
+	branch = paper
