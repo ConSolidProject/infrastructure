@@ -6,3 +6,15 @@
 	path = api/daapi
 	url = https://github.com/LBD-Hackers/daapi.git
 	branch = paper
+[submodule "consolid-demo"]
+	path = consolid-demo
+	url = https://github.com/LBD-Hackers/consolid-demo.git
+	branch = paper
+[submodule "vocabulary"]
+	path = vocabulary
+	url = https://github.com/ConSolidProject/vocabulary.git
+	branch = paper
+[submodule "system/SolidCommunity_Fuseki"]
+	path = system/SolidCommunity_Fuseki
+	url = https://github.com/LBD-Hackers/SolidCommunity_Fuseki.git
+	branch = paper
