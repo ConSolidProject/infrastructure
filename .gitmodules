@@ -18,3 +18,8 @@
 	path = system/SolidCommunity_Fuseki
 	url = https://github.com/LBD-Hackers/SolidCommunity_Fuseki.git
 	branch = paper
+[submodule "system/lbdserver-sparql-satellite"]
+	path = system/lbdserver-sparql-satellite
+	url = https://github.com/LBD-Hackers/lbdserver-sparql-satellite.git
+	branch = paper
+
