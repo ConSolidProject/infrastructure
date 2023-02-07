@@ -23,3 +23,5 @@
 	url = https://github.com/LBD-Hackers/lbdserver-sparql-satellite.git
 	branch = paper
 
+[submodule "./consolid-demo"]
+	branch = paper
