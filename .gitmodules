@@ -18,10 +18,7 @@
 	path = system/SolidCommunity_Fuseki
 	url = https://github.com/LBD-Hackers/SolidCommunity_Fuseki.git
 	branch = paper
-[submodule "system/lbdserver-sparql-satellite"]
-	path = system/lbdserver-sparql-satellite
-	url = https://github.com/LBD-Hackers/lbdserver-sparql-satellite.git
-	branch = paper
-
-[submodule "./consolid-demo"]
+[submodule "system/auth-satellite"]
+	path = system/auth-satellite
+	url = https://github.com/ConSolidProject/auth-satellite.git
 	branch = paper
