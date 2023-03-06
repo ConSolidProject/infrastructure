@@ -1,0 +1,59 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^4.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "comment": [
+        "Sets all the relevant Solid-OIDC parameters.",
+        "dPoP is draft-01 since that is the latest version v6 of the OIDC library supports."
+      ],
+      "@id": "urn:solid-server:default:IdentityProviderFactory",
+      "@type": "IdentityProviderFactory",
+      "args_adapterFactory": { "@id": "urn:solid-server:default:IdpAdapterFactory" },
+      "args_baseUrl": { "@id": "urn:solid-server:default:variable:baseUrl" },
+      "args_oidcPath": "/.oidc",
+      "args_interactionHandler": { "@id": "urn:solid-server:auth:password:PromptHandler" },
+      "args_credentialStorage": { "@id": "urn:solid-server:auth:password:CredentialsStorage" },
+      "args_storage": {
+        "@type": "EncodingPathStorage",
+        "relativePath": "/idp/keys/",
+        "source": { "@id": "urn:solid-server:default:KeyValueStorage" }
+      },
+      "args_errorHandler": { "@id": "urn:solid-server:default:ErrorHandler" },
+      "args_responseWriter": { "@id": "urn:solid-server:default:ResponseWriter" },
+      "config": {
+        "claims": {
+          "openid": [ "azp" ],
+          "webid": [ "webid" ]
+        },
+        "cookies": {
+          "long": { "signed": true, "maxAge": 86400000 },
+          "short": { "signed": true }
+        },
+        "features": {
+          "claimsParameter": { "enabled": true },
+          "clientCredentials": { "enabled": true },
+          "devInteractions": { "enabled": false },
+          "dPoP": { "enabled": true, "ack": "draft-03" },
+          "introspection": { "enabled": true },
+          "registration": { "enabled": true },
+          "revocation": { "enabled": true },
+          "userinfo": { "enabled": false }
+        },
+        "scopes": [ "openid", "profile", "offline_access", "webid" ],
+        "subjectTypes": [ "public" ],
+        "ttl": {
+          "AccessToken": 3600000,
+          "AuthorizationCode": 600000,
+          "BackchannelAuthenticationRequest": 600000,
+          "ClientCredentials": 600000,
+          "DeviceCode": 600000,
+          "Grant": 1209600000,
+          "IdToken": 3600000,
+          "Interaction": 3600000,
+          "RefreshToken": 86400000,
+          "Session": 1209600000
+        }
+      }
+    }
+  ]
+}

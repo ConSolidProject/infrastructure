@@ -1,0 +1,34 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^4.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "comment": "Adds all the necessary CORS headers.",
+      "@id": "urn:solid-server:default:Middleware_Cors",
+      "@type": "CorsHandler",
+      "options_methods": [
+        "GET",
+        "HEAD",
+        "OPTIONS",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "options_credentials": true,
+      "options_preflightContinue": false,
+      "options_exposedHeaders": [
+        "Accept-Patch",
+        "Accept-Post",
+        "Accept-Put",
+        "Allow",
+        "ETag",
+        "Last-Modified",
+        "Link",
+        "Location",
+        "MS-Author-Via",
+        "Updates-Via",
+        "WAC-Allow"
+      ]
+    }
+  ]
+}

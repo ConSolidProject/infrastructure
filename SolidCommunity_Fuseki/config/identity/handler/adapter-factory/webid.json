@@ -1,0 +1,23 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^4.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "comment": "An adapter is responsible for storing all interaction metadata.",
+      "@id": "urn:solid-server:default:IdpAdapterFactory",
+      "@type": "ClientCredentialsAdapterFactory",
+      "storage": { "@id": "urn:solid-server:auth:password:CredentialsStorage" },
+      "source": {
+        "@type": "WebIdAdapterFactory",
+        "converter": {"@id": "urn:solid-server:default:RepresentationConverter" },
+        "source": {
+          "@type": "ExpiringAdapterFactory",
+          "storage": {
+            "@type": "EncodingPathStorage",
+            "relativePath": "/idp/adapter/",
+            "source": { "@id": "urn:solid-server:default:KeyValueStorage" }
+          }
+        }
+      }
+    }
+  ]
+}
