@@ -14,11 +14,11 @@
 	path = vocabulary
 	url = https://github.com/ConSolidProject/vocabulary.git
 	branch = paper
-[submodule "SolidCommunity_Fuseki"]
-	path = SolidCommunity_Fuseki
-	url = https://github.com/LBD-Hackers/SolidCommunity_Fuseki.git
-	branch = paper
 [submodule "auth-satellite"]
 	path = auth-satellite
 	url = https://github.com/ConSolidProject/auth-satellite.git
+	branch = paper
+[submodule "SolidCommunity_Fuseki"]
+	path = SolidCommunity_Fuseki
+	url = https://github.com/LBD-Hackers/SolidCommunity_Fuseki.git
 	branch = paper
